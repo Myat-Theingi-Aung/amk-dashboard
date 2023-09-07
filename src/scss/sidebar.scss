@@ -1,0 +1,35 @@
+$primary: 	#46005F;
+
+.border-white {
+  border: 4px solid #ffffff;
+}
+
+.border-gray {
+  border: 2px solid #dee2e6 !important;
+}
+
+.nav .nav-item .nav-link {
+  color: #ffffff;
+}
+
+.nav-item {
+  padding: 10px 0px;
+}
+
+.active {
+  background-color: #f8f9fa !important;
+  color: $primary !important;
+  border-top-left-radius: 80px 80px;
+  border-bottom-left-radius: 80px 80px;
+}
+
+.search:focus{
+  background-color: #E4F6F8 !important;
+  box-shadow: none !important;
+}
+
+.search {
+  outline: none;
+}
+
+

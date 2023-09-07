@@ -1,4 +1,12 @@
-$primary: #6918b4;
+$primary: 	#46005F;
 $secondary: #8318b4;
 
 @import '~bootstrap/scss/bootstrap.scss';
+
+.blue-light {
+  background-color: #E4F6F8;
+}
+
+.white-gray {
+  color: #dedede !important;
+}
