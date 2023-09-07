@@ -1,0 +1,13 @@
+$primary: #6918b4;
+
+$secondary: #8318b4;
+
+.bg-primary {
+  background-color: $primary;
+}
+
+.bg-secondary {
+  background-color: $secondary;
+}
+
+@import '~bootstrap/scss/bootstrap.scss';
