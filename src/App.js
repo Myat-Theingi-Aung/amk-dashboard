@@ -1,15 +1,15 @@
-import $ from 'jquery';
+import { Routes, Route } from "react-router-dom"
+import Home from "./Home";
+import NotFound from "./NotFound";
 
 function App() {
-  const jQueryCode = () => {
-    $('h1').css('color', 'red')
-  }
-
   return (
-    <>
-      <h1 className="text-center">App</h1>
-      <button className="btn btn-primary" onClick={jQueryCode}>click</button>
-    </>
+    <div className="App">
+      <Routes>
+        <Route path="/home" element={ <Home /> } />
+        <Route path="*" element={ <NotFound />} />
+      </Routes>
+    </div>
   );
 }
 
