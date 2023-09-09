@@ -2,7 +2,7 @@ import store from '../img/store.avif';
 import '../scss/sidebar.scss';
 import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import $ from 'jquery';
+// import $ from 'jquery';
 
 export default function Sidebar() {
 
@@ -20,8 +20,8 @@ export default function Sidebar() {
   //     return false;
   // };
   return (
-    <div className="bg-primary ps-3 vh-100 sticky-top">
-      <div className='position-relative vh-100'>
+    <div className="bg-primary ps-3 min-height-100" >
+      {/* <div className='position-relative vh-100'> */}
         {/* <div className="row">
           <div className="col-12">
             <h1 className="text-center py-2 border-bottom">
@@ -29,7 +29,7 @@ export default function Sidebar() {
             </h1>
           </div>
         </div> */}
-        <div className="row pt-4">
+        <div className="row pt-4 sticky-top bg-primary shadow-lg">
           <div className="col-12">
             {/* <div className='mb-3 d-flex justify-content-center'>
               <img src={store} alt="main" height={'130px'} className='main-img rounded-circle' />
@@ -45,64 +45,93 @@ export default function Sidebar() {
             </p> */}
           </div>
         </div>
-        <div className="row pt-4">
+        <div className="row pt-4 d-flex flex-column">
           <div className="col-12 pe-0">
             <ul className="nav flex-column">
               <li className="nav-item">
-                <NavLink activeClassName="active" className="nav-link text-uppercase fw-bold" to="/">
+                <NavLink to="/" className={({isActive}) => (isActive? "active nav-link text-uppercase fw-bold" : "nav-link text-uppercase fw-bold")}>
                   <i className='bx bx-home me-3'></i>
                   Dashboard
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink activeClassName="active" className="nav-link text-uppercase fw-bold" to="/home/test">
+                <NavLink to="/home" className={({isActive}) => (isActive? "active nav-link text-uppercase fw-bold" : "nav-link text-uppercase fw-bold")}>
                   <FontAwesomeIcon icon="fa-solid fa-list-check" className='me-3' />
                   Daily payments
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink activeClassName="active" className="nav-link text-uppercase fw-bold" to="/daily-sales">
+                <NavLink to="/daily-sales" className={({isActive}) => (isActive? "active nav-link text-uppercase fw-bold" : "nav-link text-uppercase fw-bold")}>
                   <FontAwesomeIcon icon="fa-solid fa-list-ol" className='me-3' />
                   Daily Sales
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink activeClassName="active" className="nav-link text-uppercase fw-bold" to="/category/types">
+                <NavLink to="/category/types" className={({isActive}) => (isActive? "active nav-link text-uppercase fw-bold" : "nav-link text-uppercase fw-bold")}>
                   <i className='bx bx-category-alt me-3'></i>
                   Category Types
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink activeClassName="active" className="nav-link text-uppercase fw-bold" to="categories">
+                <NavLink to="categories" className={({isActive}) => (isActive? "active nav-link text-uppercase fw-bold" : "nav-link text-uppercase fw-bold")}>
                   <i className='bx bx-category me-3' ></i>
                   Categories
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink activeClassName="active" className="nav-link text-uppercase fw-bold" to="/colors">
+                <NavLink to="/colors" className={({isActive}) => (isActive? "active nav-link text-uppercase fw-bold" : "nav-link text-uppercase fw-bold")}>
                   <i className='bx bxs-color me-3' ></i>
                   Colors
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink activeClassName="active" className="nav-link text-uppercase fw-bold" to="/products">
+                <NavLink to="/products" className={({isActive}) => (isActive? "active nav-link text-uppercase fw-bold" : "nav-link text-uppercase fw-bold")}>
                   <i className='bx bxs-package me-3'></i>
                   Products
                 </NavLink>
               </li>
-              
+              <li className="nav-item">
+                <NavLink to="/logout" className={({isActive}) => (isActive? "active nav-link text-uppercase fw-bold" : "nav-link text-uppercase fw-bold")}>
+                  <FontAwesomeIcon icon="fa-solid fa-right-from-bracket" className='me-3' />
+                  Logout
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink to="/one" className={({isActive}) => (isActive? "active nav-link text-uppercase fw-bold" : "nav-link text-uppercase fw-bold")}>
+                  <FontAwesomeIcon icon="fa-solid fa-right-from-bracket" className='me-3' />
+                  One
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink to="/two" className={({isActive}) => (isActive? "active nav-link text-uppercase fw-bold" : "nav-link text-uppercase fw-bold")}>
+                  <FontAwesomeIcon icon="fa-solid fa-right-from-bracket" className='me-3' />
+                  Two
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink to="/three" className={({isActive}) => (isActive? "active nav-link text-uppercase fw-bold" : "nav-link text-uppercase fw-bold")}>
+                  <FontAwesomeIcon icon="fa-solid fa-right-from-bracket" className='me-3' />
+                  Three
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink to="/four" className={({isActive}) => (isActive? "active nav-link text-uppercase fw-bold" : "nav-link text-uppercase fw-bold")}>
+                  <FontAwesomeIcon icon="fa-solid fa-right-from-bracket" className='me-3' />
+                  Four
+                </NavLink>
+              </li>
             </ul>
           </div>
         </div>
-        <div className="row position-absolute bottom-0">
+        <div className="row">
           <div className="col-12">
             <p className='mt-2 white-gray pe-3'>
-              <i className='bx bx-current-location me-2'></i>
+              <FontAwesomeIcon icon="fa-solid fa-location-arrow" className='me-3' />
               <span>Bayin Naung Street, Sidaw Mingalar Ward, Pyay</span>
             </p>
           </div>
         </div>
-      </div>
+      {/* </div> */}
     </div>
   )
 }

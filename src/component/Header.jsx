@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function Header({title}) {
   return (
-    <div className="row mx-5 border-bottom">
+    <div className="row mx-5 border-bottom sticky-top">
       <div className="col-12">
         <div className='d-flex justify-content-between'>
           <h2 className='text-primary fw-bold'>{ title }</h2>
